@@ -300,7 +300,7 @@ export default function LandingPage() {
                       <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-gray-600 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-600 italic">&ldquo;{testimonial.content}&rdquo;</p>
                   <div>
                     <p className="font-semibold text-gray-900">{testimonial.name}</p>
                     <p className="text-sm text-gray-500">{testimonial.role}</p>
