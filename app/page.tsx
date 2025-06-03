@@ -26,10 +26,7 @@ export default function LandingPage() {
       <header className="border-b border-gray-100 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-950/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20">
-              <Package className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">Kiloan</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 bg-clip-text text-transparent">Kiloan</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="#features" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors text-sm font-medium">
@@ -177,43 +174,49 @@ export default function LandingPage() {
                 icon: MapPin,
                 title: "Pencarian Berbasis Lokasi",
                 description: "Temukan laundry terdekat dari kos-mu dengan mudah. Urutkan berdasarkan jarak dan rating.",
-                color: "emerald",
+                iconBg: "bg-emerald-100 dark:bg-emerald-900/50",
+                iconColor: "text-emerald-600 dark:text-emerald-400"
               },
               {
                 icon: Star,
                 title: "Rating & Ulasan Real-time",
                 description: "Baca review jujur dari sesama mahasiswa untuk memilih laundry terbaik.",
-                color: "yellow",
+                iconBg: "bg-yellow-100 dark:bg-yellow-900/50",
+                iconColor: "text-yellow-600 dark:text-yellow-400"
               },
               {
                 icon: DollarSign,
                 title: "Harga Transparan",
                 description: "Lihat estimasi harga sebelum pesan. Tidak ada biaya tersembunyi.",
-                color: "green",
+                iconBg: "bg-green-100 dark:bg-green-900/50",
+                iconColor: "text-green-600 dark:text-green-400"
               },
               {
                 icon: Package,
                 title: "Tracking Pesanan",
                 description: "Pantau status laundry-mu secara real-time dari proses hingga siap diambil.",
-                color: "blue",
+                iconBg: "bg-blue-100 dark:bg-blue-900/50",
+                iconColor: "text-blue-600 dark:text-blue-400"
               },
               {
                 icon: Shield,
                 title: "Laundry Terverifikasi",
                 description: "Badge khusus untuk laundry yang sudah diverifikasi kualitas dan keamanannya.",
-                color: "purple",
+                iconBg: "bg-purple-100 dark:bg-purple-900/50",
+                iconColor: "text-purple-600 dark:text-purple-400"
               },
               {
                 icon: Smartphone,
                 title: "Perbandingan Layanan",
                 description: "Bandingkan harga, rating, dan layanan dari berbagai laundry dalam satu tampilan.",
-                color: "orange",
+                iconBg: "bg-orange-100 dark:bg-orange-900/50",
+                iconColor: "text-orange-600 dark:text-orange-400"
               },
             ].map((feature, index) => (
               <Card key={index} className="p-6 hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="space-y-4 p-0">
-                  <div className={`w-12 h-12 bg-${feature.color}-100 dark:bg-${feature.color}-900/50 rounded-lg flex items-center justify-center`}>
-                    <feature.icon className={`w-6 h-6 text-${feature.color}-600 dark:text-${feature.color}-400`} />
+                  <div className={`w-12 h-12 ${feature.iconBg} rounded-lg flex items-center justify-center`}>
+                    <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
@@ -390,10 +393,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20">
-                  <Package className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Kiloan</span>
+                <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Kiloan</span>
               </div>
               <p className="text-gray-400">
                 Platform laundry terpercaya untuk mahasiswa Indonesia. Hidup lebih praktis, laundry lebih mudah.
@@ -465,7 +465,7 @@ export default function LandingPage() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Kiloan. Dibuat dengan ❤️ untuk mahasiswa Indonesia.</p>
+            <p>&copy; 2025 Kiloan. Dibuat dengan ❤️ untuk mahasiswa Universitas Indonesia.</p>
           </div>
         </div>
       </footer>
