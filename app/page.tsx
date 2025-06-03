@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { AppScreenshotMarquee } from "@/components/app-screenshot-marquee"
 import {
   MapPin,
   Star,
@@ -101,13 +102,7 @@ export default function LandingPage() {
 
             <div className="relative">
               <div className="relative z-10">
-                <Image
-                  src="/placeholder.svg?height=600&width=400"
-                  alt="Kiloan App Screenshot"
-                  width={400}
-                  height={600}
-                  className="mx-auto rounded-3xl shadow-2xl dark:shadow-gray-900/50 transition-all duration-300 hover:scale-[1.02]"
-                />
+                <AppScreenshotMarquee />
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-400 dark:from-emerald-500 dark:to-teal-500 rounded-3xl blur-3xl opacity-20 scale-105 animate-pulse"></div>
             </div>
