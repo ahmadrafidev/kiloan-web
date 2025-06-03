@@ -24,8 +24,8 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white dark:bg-gray-950">
       {/* Header */}
       <header className="border-b border-gray-100 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-950/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-center relative max-w-7xl">
+          <div className="absolute left-4">
             <Link href="/">
               <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 bg-clip-text text-transparent">
                 Kiloan
@@ -43,7 +43,7 @@ export default function LandingPage() {
               Download
             </Link>
           </nav>
-          <div className="flex items-center space-x-4">
+          <div className="absolute right-4 flex items-center space-x-4">
             <ThemeToggle />
             <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 dark:from-emerald-500 dark:to-teal-500 dark:hover:from-emerald-600 dark:hover:to-teal-600 text-white shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:shadow-emerald-500/30">
               Download App
