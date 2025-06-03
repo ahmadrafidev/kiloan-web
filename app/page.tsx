@@ -53,7 +53,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-emerald-950/50 dark:via-gray-950 dark:to-teal-950/50">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald-50/80 via-white/90 to-teal-50/80 dark:from-emerald-900/70 dark:via-gray-900/90 dark:to-teal-900/70">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -111,7 +111,7 @@ export default function LandingPage() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 bg-gray-50/50 dark:bg-gray-900/50">
+      <section className="py-20 bg-gradient-to-bl from-teal-50/80 via-white/90 to-emerald-50/80 dark:from-teal-900/70 dark:via-gray-900/90 dark:to-emerald-900/70">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
@@ -161,7 +161,7 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20">
+      <section id="features" className="py-20 bg-gradient-to-tr from-emerald-50/80 via-white/90 to-teal-50/80 dark:from-emerald-900/70 dark:via-gray-900/90 dark:to-teal-900/70">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
@@ -232,7 +232,7 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 bg-gray-50/50 dark:bg-gray-900/50">
+      <section id="how-it-works" className="py-20 bg-gradient-to-tl from-teal-50/80 via-white/90 to-emerald-50/80 dark:from-teal-900/70 dark:via-gray-900/90 dark:to-emerald-900/70">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
@@ -282,7 +282,7 @@ export default function LandingPage() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-br from-emerald-50/80 via-white/90 to-teal-50/80 dark:from-emerald-900/70 dark:via-gray-900/90 dark:to-teal-900/70">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
