@@ -17,64 +17,73 @@ import {
   Play,
   ArrowRight,
 } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-950">
       {/* Header */}
-      <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+      <header className="border-b border-gray-100 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-950/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20">
               <Package className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">Kiloan</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">Kiloan</span>
           </div>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link href="#features" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors text-sm font-medium">
               Fitur
             </Link>
-            <Link href="#how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link href="#how-it-works" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors text-sm font-medium">
               Cara Kerja
             </Link>
-            <Link href="#download" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link href="#download" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors text-sm font-medium">
               Download
             </Link>
           </nav>
-          <Button className="bg-emerald-600 hover:bg-emerald-700">Download App</Button>
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 dark:from-emerald-500 dark:to-teal-500 dark:hover:from-emerald-600 dark:hover:to-teal-600 text-white shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:shadow-emerald-500/30">
+              Download App
+            </Button>
+          </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-emerald-950/50 dark:via-gray-950 dark:to-teal-950/50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100">
+                <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-100 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 px-4 py-1.5 rounded-full text-sm font-medium shadow-sm">
                   Platform Laundry Terpercaya untuk Mahasiswa
                 </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Laundry Jadi Mudah dengan <span className="text-emerald-600">Kiloan</span>
+                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight tracking-tight">
+                  Laundry Jadi Mudah dengan{" "}
+                  <span className="bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-400 bg-clip-text text-transparent">
+                    Kiloan
+                  </span>
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                   Temukan laundry terpercaya di sekitar kos-mu dengan harga transparan, rating real-time, dan tracking
                   pesanan. Khusus untuk mahasiswa yang ingin hidup lebih praktis.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg px-8">
+                <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 dark:from-emerald-500 dark:to-teal-500 dark:hover:from-emerald-600 dark:hover:to-teal-600 text-white shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:shadow-emerald-500/30 text-lg px-8">
                   <Download className="w-5 h-5 mr-2" />
                   Download Gratis
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8">
+                <Button size="lg" variant="outline" className="text-lg px-8 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800/50 transition-all duration-300">
                   <Play className="w-5 h-5 mr-2" />
                   Lihat Demo
                 </Button>
               </div>
 
-              <div className="flex items-center space-x-8 text-sm text-gray-600">
+              <div className="flex items-center space-x-8 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Users className="w-4 h-4" />
                   <span>2000+ Mahasiswa</span>
@@ -97,21 +106,23 @@ export default function LandingPage() {
                   alt="Kiloan App Screenshot"
                   width={400}
                   height={600}
-                  className="mx-auto rounded-3xl shadow-2xl"
+                  className="mx-auto rounded-3xl shadow-2xl dark:shadow-gray-900/50 transition-all duration-300 hover:scale-[1.02]"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-3xl blur-3xl opacity-20 scale-105"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-400 dark:from-emerald-500 dark:to-teal-500 rounded-3xl blur-3xl opacity-20 scale-105 animate-pulse"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50/50 dark:bg-gray-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Masalah yang Sering Dialami Mahasiswa Kos</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+              Masalah yang Sering Dialami Mahasiswa Kos
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Dari riset kami terhadap 9 juta+ mahasiswa Indonesia, ini adalah keluhan utama mereka tentang layanan
               laundry
             </p>
@@ -140,13 +151,13 @@ export default function LandingPage() {
                 description: "Tidak tahu kapan laundry selesai dan siap diambil",
               },
             ].map((problem, index) => (
-              <Card key={index} className="text-center p-6 border-red-100 bg-red-50">
+              <Card key={index} className="text-center p-6 border-red-100 dark:border-red-900/50 bg-red-50/50 dark:bg-red-950/50 hover:shadow-lg dark:hover:shadow-red-900/20 transition-all duration-300">
                 <CardContent className="space-y-4 p-0">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto">
-                    <problem.icon className="w-6 h-6 text-red-600" />
+                  <div className="w-12 h-12 bg-red-100 dark:bg-red-900/50 rounded-lg flex items-center justify-center mx-auto">
+                    <problem.icon className="w-6 h-6 text-red-600 dark:text-red-400" />
                   </div>
-                  <h3 className="font-semibold text-gray-900">{problem.title}</h3>
-                  <p className="text-sm text-gray-600">{problem.description}</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">{problem.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{problem.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -158,8 +169,10 @@ export default function LandingPage() {
       <section id="features" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Solusi Lengkap dari Kiloan</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+              Solusi Lengkap dari Kiloan
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Fitur-fitur yang dirancang khusus untuk mengatasi semua masalah laundry mahasiswa kos
             </p>
           </div>
@@ -203,13 +216,13 @@ export default function LandingPage() {
                 color: "orange",
               },
             ].map((feature, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-6 hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="space-y-4 p-0">
-                  <div className={`w-12 h-12 bg-${feature.color}-100 rounded-lg flex items-center justify-center`}>
-                    <feature.icon className={`w-6 h-6 text-${feature.color}-600`} />
+                  <div className={`w-12 h-12 bg-${feature.color}-100 dark:bg-${feature.color}-900/50 rounded-lg flex items-center justify-center`}>
+                    <feature.icon className={`w-6 h-6 text-${feature.color}-600 dark:text-${feature.color}-400`} />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -218,11 +231,15 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 bg-gray-50">
+      <section id="how-it-works" className="py-20 bg-gray-50/50 dark:bg-gray-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Cara Kerja Kiloan</h2>
-            <p className="text-xl text-gray-600">Hanya 4 langkah mudah untuk laundry yang hassle-free</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+              Cara Kerja Kiloan
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Hanya 4 langkah mudah untuk laundry yang hassle-free
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -249,12 +266,14 @@ export default function LandingPage() {
               },
             ].map((step, index) => (
               <div key={index} className="text-center space-y-4">
-                <div className="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 dark:from-emerald-500 dark:to-teal-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto shadow-lg shadow-emerald-500/20">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
-                {index < 3 && <ArrowRight className="w-6 h-6 text-emerald-600 mx-auto lg:hidden" />}
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{step.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{step.description}</p>
+                {index < 3 && (
+                  <ArrowRight className="w-6 h-6 text-emerald-600 dark:text-emerald-400 mx-auto lg:hidden animate-pulse" />
+                )}
               </div>
             ))}
           </div>
@@ -265,8 +284,12 @@ export default function LandingPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Dipercaya Ribuan Mahasiswa</h2>
-            <p className="text-xl text-gray-600">Lihat apa kata mereka tentang Kiloan</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+              Dipercaya Ribuan Mahasiswa
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Lihat apa kata mereka tentang Kiloan
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -293,17 +316,17 @@ export default function LandingPage() {
                 rating: 5,
               },
             ].map((testimonial, index) => (
-              <Card key={index} className="p-6">
+              <Card key={index} className="p-6 dark:bg-gray-900/50 hover:shadow-lg dark:hover:shadow-gray-900/50 transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="space-y-4 p-0">
                   <div className="flex space-x-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-gray-600 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                  <p className="text-gray-600 dark:text-gray-300 italic">&ldquo;{testimonial.content}&rdquo;</p>
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -313,10 +336,11 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section id="download" className="py-20 bg-gradient-to-br from-emerald-600 to-teal-600">
-        <div className="container mx-auto px-4 text-center">
+      <section id="download" className="py-20 bg-gradient-to-br from-emerald-600 to-teal-600 dark:from-emerald-700 dark:to-teal-700 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+        <div className="container mx-auto px-4 text-center relative">
           <div className="space-y-8 max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white tracking-tight">
               Siap Untuk Pengalaman Laundry yang Lebih Baik?
             </h2>
             <p className="text-xl text-emerald-100">
@@ -325,14 +349,14 @@ export default function LandingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8">
+              <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 dark:bg-white dark:text-emerald-600 dark:hover:bg-gray-100 text-lg px-8 shadow-lg shadow-black/10 transition-all duration-300 hover:shadow-black/20">
                 <Download className="w-5 h-5 mr-2" />
                 Download di Play Store
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-emerald-600 text-lg px-8"
+                className="border-white text-white hover:bg-white hover:text-emerald-600 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-emerald-600 text-lg px-8 transition-all duration-300"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download di App Store
@@ -363,10 +387,10 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20">
                   <Package className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">Kiloan</span>
+                <span className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Kiloan</span>
               </div>
               <p className="text-gray-400">
                 Platform laundry terpercaya untuk mahasiswa Indonesia. Hidup lebih praktis, laundry lebih mudah.
