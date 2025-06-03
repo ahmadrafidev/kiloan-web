@@ -19,6 +19,7 @@ import {
   Play,
   ArrowRight,
   Menu,
+  ArrowDown,
 } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { TestimonialMarquee } from "@/components/testimonial-marquee"
@@ -305,7 +306,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative">
             {[
               {
                 step: "1",
@@ -328,14 +329,19 @@ export default function LandingPage() {
                 description: "Pantau progress dan ambil pakaian saat sudah selesai",
               },
             ].map((step, index) => (
-              <div key={index} className="text-center space-y-3 sm:space-y-4">
+              <div key={index} className="text-center space-y-3 md:space-y-4 relative">
                 <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-emerald-600 to-teal-600 dark:from-emerald-500 dark:to-teal-500 text-white rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold mx-auto shadow-lg shadow-emerald-500/20">
                   {step.step}
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">{step.title}</h3>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">{step.description}</p>
                 {index < 3 && (
-                  <ArrowRight className="w-6 h-6 text-emerald-600 dark:text-emerald-400 mx-auto lg:hidden animate-pulse" />
+                  <>
+                    <ArrowDown className="w-6 h-6 text-emerald-600 dark:text-emerald-400 mx-auto md:hidden animate-pulse" />
+                    <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
+                      <ArrowRight className="w-6 h-6 text-emerald-600 dark:text-emerald-400 animate-pulse" />
+                    </div>
+                  </>
                 )}
               </div>
             ))}
