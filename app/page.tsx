@@ -343,17 +343,26 @@ export default function LandingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-emerald-600 hover:bg-emerald-50 dark:bg-emerald-50 dark:text-emerald-900 dark:hover:bg-emerald-100 text-lg px-8 shadow-lg shadow-black/10 transition-all duration-300 hover:shadow-black/20">
-                <Download className="w-5 h-5 mr-2" />
-                Download di Play Store
+              <Button 
+                size="lg" 
+                className="group relative bg-white text-emerald-600 hover:bg-emerald-50 dark:bg-emerald-50 dark:text-emerald-900 dark:hover:bg-emerald-100 text-lg px-8 shadow-lg shadow-black/10 transition-all duration-300 hover:shadow-black/20 overflow-hidden"
+              >
+                <span className="relative z-10 flex items-center">
+                  <Download className="w-5 h-5 mr-2 transition-transform group-hover:translate-y-0.5" />
+                  Download di Play Store
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-100 dark:to-teal-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-white/10 text-white border-white/20 hover:bg-white/20 dark:bg-emerald-900/50 dark:text-emerald-50 dark:border-emerald-400/20 dark:hover:bg-emerald-900/70 text-lg px-8 transition-all duration-300"
+                className="group relative bg-white/10 text-white border-white/20 hover:bg-white/20 dark:bg-emerald-900/50 dark:text-emerald-50 dark:border-emerald-400/20 dark:hover:bg-emerald-900/70 text-lg px-8 transition-all duration-300 overflow-hidden"
               >
-                <Download className="w-5 h-5 mr-2" />
-                Download di App Store
+                <span className="relative z-10 flex items-center">
+                  <Download className="w-5 h-5 mr-2 transition-transform group-hover:translate-y-0.5" />
+                  Download di App Store
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 dark:from-emerald-400/10 dark:to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
             </div>
 
