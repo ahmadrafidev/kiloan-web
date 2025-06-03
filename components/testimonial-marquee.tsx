@@ -78,11 +78,10 @@ export function TestimonialMarquee() {
     if (!scrollContainer) return
 
     const scrollWidth = scrollContainer.scrollWidth
-    const clientWidth = scrollContainer.clientWidth
     let scrollPos = 0
 
     const scroll = () => {
-      scrollPos += 0.5 
+      scrollPos += 0.5
       if (scrollPos >= scrollWidth / 2) {
         scrollPos = 0
       }
