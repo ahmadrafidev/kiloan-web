@@ -371,11 +371,10 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 sm:px-6 text-center relative">
           <div className="space-y-6 sm:space-y-8 max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
-              Siap Untuk Pengalaman Laundry yang Lebih Baik?
+              Transparan & Terjangkau untuk Semua
             </h2>
             <p className="text-lg sm:text-xl text-emerald-50/90">
-              Download Kiloan sekarang dan rasakan kemudahan mencari laundry terpercaya di sekitar kos-mu. Gratis untuk
-              semua mahasiswa!
+              Nikmati layanan laundry berkualitas dengan biaya yang jelas dan terjangkau. Kami berkomitmen memberikan harga terbaik untuk mahasiswa.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -405,16 +404,17 @@ export default function LandingPage() {
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-emerald-50/90">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5" />
-                <span>100% Gratis</span>
+                <span>Biaya Transparan</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5" />
-                <span>Khusus Mahasiswa</span>
+                <span>Harga Terjangkau</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5" />
                 <span>Laundry Terverifikasi</span>
               </div>
+              
             </div>
           </div>
         </div>
