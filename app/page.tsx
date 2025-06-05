@@ -20,6 +20,7 @@ import {
   ArrowRight,
   Menu,
   ArrowDown,
+  Github,
 } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { TestimonialMarquee } from "@/components/testimonial-marquee"
@@ -55,7 +56,7 @@ export default function LandingPage() {
               <Link href="#features" className="text-gray-700 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white transition-colors text-sm md:text-base font-medium">
                 Fitur
               </Link>
-                <Link href="#how-it-works" className="text-gray-700 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white transition-colors text-sm md:text-base font-medium">
+              <Link href="#how-it-works" className="text-gray-700 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white transition-colors text-sm md:text-base font-medium">
                 Cara Kerja
               </Link>
               <Link href="#download" className="text-gray-700 hover:text-gray-950 dark:text-gray-300 dark:hover:text-white transition-colors text-sm md:text-base font-medium">
@@ -69,6 +70,15 @@ export default function LandingPage() {
             <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 dark:from-emerald-500 dark:to-teal-500 dark:hover:from-emerald-600 dark:hover:to-teal-600 text-white shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:shadow-emerald-500/30">
               Download App
             </Button>
+            <Link 
+              href="https://github.com/ahmadrafidev/kiloan-web" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              <Github className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+            </Link>
+            
           </div>
         </div>
 
